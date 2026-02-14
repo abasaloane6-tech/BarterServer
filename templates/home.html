@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>رفع إعلان جديد</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1>رفع إعلان جديد</h1>
+
+<form action="/add" method="POST" enctype="multipart/form-data">
+    <label>اسم المنتج:</label><br>
+    <input type="text" name="name" required><br><br>
+
+    <label>الوصف:</label><br>
+    <textarea name="desc" required></textarea><br><br>
+
+    <label>السعر:</label><br>
+    <input type="text" name="price" required><br><br>
+
+    <label>واتساب:</label><br>
+    <input type="text" name="whatsapp" required><br><br>
+
+    <label>صورة المنتج:</label><br>
+    <input type="file" name="image" required><br><br>
+
+    <button type="submit">رفع الإعلان</button>
+</form>
+
+<a href="/"><button>العودة للصفحة الرئيسية</button></a>
+
+</body>
+</html>
