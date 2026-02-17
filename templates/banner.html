@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>رفع البانر</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<h1 style="text-align:center;">رفع صورة البانر</h1>
+
+<form action="/banner" method="POST" enctype="multipart/form-data" style="text-align:center; margin-top:30px;">
+    <input type="file" name="banner_image" required>
+    <button type="submit" style="padding:5px 15px; margin-left:10px;">رفع الصورة</button>
+</form>
+
+<div style="text-align:center; margin-top:20px;">
+    <img src="/static/{{ banner.image }}" alt="البانر الحالي" style="max-width:80%; border-radius:10px; box-shadow:0 2px 8px rgba(0,0,0,0.2);">
+</div>
+
+<div style="text-align:center; margin-top:20px;">
+    <a href="/admin"><button style="padding:5px 15px;">العودة للوحة التحكم</button></a>
+</div>
+
+</body>
+</html>
