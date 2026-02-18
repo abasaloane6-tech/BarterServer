@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>لوحة التحكم - Admin</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h2>لوحة التحكم - Admin</h2>
+
+    <h3>المنتجات</h3>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr>
+            <th>اسم المنتج</th>
+            <th>الوصف</th>
+            <th>السعر</th>
+        </tr>
+        {% for product in products %}
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>{{ product.description }}</td>
+            <td>{{ product.price }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <h3>رسائل الدردشة</h3>
+    <div class="chat-box">
+        {% for msg in messages %}
+            <p><strong>{{ msg.username }}:</strong> {{ msg.message }}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
